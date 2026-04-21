@@ -1,0 +1,56 @@
+export const endpoints = {
+  auth: {
+    signup: '/api/auth/signup',
+    login: '/api/auth/login',
+    logout: '/api/auth/logout',
+    refresh: '/api/auth/refresh',
+    forgotPassword: '/api/auth/forgot-password',
+    resetPassword: '/api/auth/reset-password',
+    me: '/api/auth/me',
+  },
+  organizations: {
+    root: '/api/organizations',
+    byId: (organizationId: string): string => `/api/organizations/${organizationId}`,
+  },
+  workspaces: {
+    root: '/api/workspaces',
+    byId: (workspaceId: string): string => `/api/workspaces/${workspaceId}`,
+    invite: (workspaceId: string): string => `/api/workspaces/${workspaceId}/invite`,
+    members: (workspaceId: string): string => `/api/workspaces/${workspaceId}/members`,
+  },
+  projects: {
+    root: '/api/projects',
+    byId: (projectId: string): string => `/api/projects/${projectId}`,
+    upload: (projectId: string): string => `/api/projects/${projectId}/upload`,
+    status: (projectId: string): string => `/api/projects/${projectId}/status`,
+    process: (projectId: string): string => `/api/projects/${projectId}/process`,
+    jobs: (projectId: string): string => `/api/projects/${projectId}/jobs`,
+    clips: (projectId: string): string => `/api/projects/${projectId}/clips`,
+    export: (projectId: string): string => `/api/projects/${projectId}/export`,
+  },
+  clips: {
+    byId: (clipId: string): string => `/api/clips/${clipId}`,
+    captions: (clipId: string): string => `/api/clips/${clipId}/captions`,
+    export: (clipId: string): string => `/api/clips/${clipId}/export`,
+  },
+  users: {
+    me: '/api/users/me',
+    byId: (userId: string): string => `/api/users/${userId}`,
+  },
+  admin: {
+    landing: '/api/admin/landing',
+    landingHero: '/api/admin/landing/hero',
+    landingMarquee: '/api/admin/landing/marquee',
+    landingFeatures: '/api/admin/landing/features',
+    landingWorkflow: '/api/admin/landing/workflow',
+    landingTestimonials: '/api/admin/landing/testimonials',
+    landingStats: '/api/admin/landing/stats',
+    users: '/api/admin/users',
+    projects: '/api/admin/projects',
+    jobs: '/api/admin/jobs',
+  },
+  public: {
+    landing: '/api/public/landing',
+  },
+  health: '/health',
+} as const
