@@ -3,6 +3,9 @@ type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'ghost'
 }
 
+type button =  }
+  label 
+
 const baseClass =
   'inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-bold tracking-tight transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2'
 
