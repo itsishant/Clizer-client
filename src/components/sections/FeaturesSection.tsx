@@ -4,6 +4,7 @@ type FeaturesSectionProps = {
   features: FeatureItem[]
 }
 
+
 export function FeaturesSection({ features }: FeaturesSectionProps) {
   return (
     <section className="w-full bg-white px-4 py-14 md:px-8 lg:px-12" id="features">
