@@ -3,6 +3,7 @@ type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'ghost'
 }
 
+
 type button =  }
   label 
 
